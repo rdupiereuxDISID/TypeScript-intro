@@ -1,5 +1,5 @@
-
-interface Product {
+// Ejercicio 07: Borramos export{}; de abajo y lo colocamos en este interfaz.
+export interface Product {
     description: string;
     price: number;
 }
@@ -14,14 +14,14 @@ const tablet: Product = {
     price: 250
 }
 
-interface TaxCalculationOpions {
+interface TaxCalculationOptions {
     tax: number;
     products: Product[];
 }
 
 //function taxCalculation( options: TaxCalculationOpions ): [number, number] {
 //function taxCalculation ({ tax, products }: TaxCalculationOpions ): [number, number] {
-function taxCalculation ( options: TaxCalculationOpions ): [number, number] {
+export function taxCalculation ( options: TaxCalculationOptions ): [number, number] {
 
     const { tax, products } = options;
 
@@ -46,5 +46,4 @@ console.log( 'Total ', total );
 console.log( 'Total ', taxTotal );
 
 
-
-export{};
+//export{};
